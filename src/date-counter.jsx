@@ -13,26 +13,48 @@ export default () => {
     let preface = "Today is";
 
     if (newDate.getTime() > NOW_AS_TIMESTAMP) {
-        preface = `${days} day(s) from today is`
+        preface = `${days} day(s) from today is`;
     } else if (newDate.getTime() < NOW_AS_TIMESTAMP) {
         preface = `${days} day(s) ago was`;
-    };
+    }
 
     return (
         <div className="flex flex-col gap-2">
-            <div className="flex flex-row gap-2 items-center">
-                <button className="btn btn-primary" onClick={() => setSteps(current => current - 1)}>-</button>
+            <div className="flex flex-row items-center gap-2">
+                <button
+                    className="btn btn-primary"
+                    onClick={() => setSteps(current => current - 1)}
+                >
+                    -
+                </button>
                 <span className="font-bold">Step: {steps}</span>
-                <button className="btn btn-primary" onClick={() => setSteps(current => current + 1)}>+</button>
+                <button
+                    className="btn btn-primary"
+                    onClick={() => setSteps(current => current + 1)}
+                >
+                    +
+                </button>
             </div>
 
             <div>
-                <button className="btn btn-primary" onClick={() => setCount(current => current - 1)}>-</button>
+                <button
+                    className="btn btn-primary"
+                    onClick={() => setCount(current => current - 1)}
+                >
+                    -
+                </button>
                 <span className="font-bold">Count: {count}</span>
-                <button className="btn btn-primary" onClick={() => setCount(current => current + 1)}>+</button>
+                <button
+                    className="btn btn-primary"
+                    onClick={() => setCount(current => current + 1)}
+                >
+                    +
+                </button>
             </div>
 
-            <span>{preface} {formattedDate}</span>
+            <span>
+                {preface} {formattedDate}
+            </span>
         </div>
     );
 };

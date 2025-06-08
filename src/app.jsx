@@ -11,8 +11,7 @@ const ROOT = createRoot(CONTAINER);
 ROOT.render(
     <StrictMode>
         <main className="font-sans">
-            <ol className="list-inside list-decimal">
-            </ol>
+            <ol className="list-inside list-decimal"></ol>
 
             <DateCounter />
         </main>
